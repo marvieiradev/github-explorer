@@ -1,5 +1,5 @@
 import { FaStar, FaClock } from "react-icons/fa";
-import { formatDate, formatNumber } from "../utils/formatters";
+import { formatDate, formatNumber } from "../utils/format";
 
 const RepoCard = ({
   repo,
@@ -83,8 +83,12 @@ const RepoCard = ({
       </div>
       {showOwner && repo.owner && !isEnhanced && (
         <div className="flex items-center gap-2 mt-4">
-            <img src={repo.owner.avatar_url} alt={repo.owner.login} className="w-6 h-6 rounded-full" />
-            <span className="text-gray-500 text-xs">{repo.owner.login}</span>
+          <img
+            src={repo.owner.avatar_url}
+            alt={repo.owner.login}
+            className="w-6 h-6 rounded-full"
+          />
+          <span className="text-gray-500 text-xs">{repo.owner.login}</span>
         </div>
       )}
     </div>

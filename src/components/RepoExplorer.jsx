@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { searchRepositories } from "../services/githubService";
+import { searchRepositories } from "../services/githubApi";
 import SearchForm from "./SearchForm";
 import RepoCard from "./RepoCard";
 import ErrorMessage from "./ErrorMessage";
