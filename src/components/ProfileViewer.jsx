@@ -13,6 +13,7 @@ import {
   FaUserPlus,
   FaCode,
   FaFileCode,
+  FaCalendarAlt,
 } from "react-icons/fa";
 
 const ProfileViewer = () => {
@@ -104,7 +105,7 @@ const ProfileViewer = () => {
     },
   ];
 
-  retrun(
+  return (
     <div
       className={`bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 py-8 px-4 ${hasContent ? "min-h-full" : "h-full flex items-center justify-center"}`}
     >
@@ -225,7 +226,7 @@ const ProfileViewer = () => {
                 )}
 
                 <div className="flex items-center gap-3 text-gray-300 p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors">
-                  <FaCalenderAlt className="text-purple-400 shrink-0" />
+                  <FaCalendarAlt className="text-purple-400 shrink-0" />
                   <div>
                     <div className="text-xs text-gray-500 uppercase tracking-wide">
                       Data de Criação
@@ -252,7 +253,7 @@ const ProfileViewer = () => {
           </div>
         )}
       </div>
-    </div>,
+    </div>
   );
 };
 

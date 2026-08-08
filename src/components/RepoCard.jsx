@@ -1,4 +1,4 @@
-import { FaStar, FaClock } from "react-icons/fa";
+import { FaStar, FaClock, FaCodeBranch } from "react-icons/fa";
 import { formatDate, formatNumber } from "../utils/format";
 
 const RepoCard = ({
@@ -65,7 +65,7 @@ const RepoCard = ({
 
       <div className="flex flex-col gap-2">
         {repo.language && (
-          <div className="flex items-center text-sm text-greay-500">
+          <div className="flex items-center text-sm text-gray-500">
             <span className="w-3 h-3 rounded-full bg-blue-500 mr-2"></span>
             {repo.language}
           </div>
@@ -75,6 +75,12 @@ const RepoCard = ({
             <FaStar className="w-4 h-4 mr-1" />
             {formatNumber(repo.stargazers_count)}
           </span>
+          {repo.forks_count !== undefined && (
+            <span className="flex items-center">
+              <FaCodeBranch className="w-4 h-4 mr-1" />
+              {formatNumber(repo.forks_count)}
+            </span>
+          )}
           <span className="flex items-center ">
             <FaClock className="w-4 h-4 mr-1" />
             {formatDate(repo.updated_at, dateFormat)}

@@ -17,7 +17,7 @@ const RepoExplorer = () => {
   const [sort, setSort] = useState("stars");
   const [order, setOrder] = useState("desc");
 
-  const handleSearchChange = async (
+  const performSearch = async (
     pageNum = 1,
     sortValue = sort,
     orderValue = order,
